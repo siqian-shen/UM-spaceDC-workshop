@@ -145,21 +145,41 @@ footer{background:var(--navy);color:#B9C6D4;margin-top:20px}
       <path d="M150 400 L150 345 M138 358 L162 358 M141 372 L159 372"/>
       <path d="M330 400 L330 350 M319 361 L341 361 M322 374 L338 374"/>
     </g>
-    <!-- trajectory arc -->
-    <path d="M150 345 C 240 180, 380 110, 520 78" stroke="#FFCB05" stroke-width="2" fill="none" stroke-dasharray="5 7"/>
-    <!-- orbit ellipse -->
-    <ellipse cx="470" cy="105" rx="118" ry="46" stroke="#3D6089" stroke-width="1.2" fill="none" transform="rotate(-14 470 105)"/>
-    <!-- orbital data center node -->
-    <g transform="translate(520 78)">
+    <!-- trajectory arc (uplink) -->
+    <path d="M150 345 C 240 180, 350 120, 440 95" stroke="#FFCB05" stroke-width="2" fill="none" stroke-dasharray="5 7"/>
+    <!-- faint orbit ring behind the node network -->
+    <ellipse cx="490" cy="105" rx="115" ry="72" stroke="#3D6089" stroke-width="1.2" fill="none" transform="rotate(-16 490 105)"/>
+    <!-- mesh links between orbital nodes -->
+    <g stroke="#5B84AE" stroke-width="1.1" fill="none" opacity="0.85">
+      <path d="M440 95 L515 62"/>
+      <path d="M515 62 L530 140"/>
+      <path d="M440 95 L530 140"/>
+    </g>
+    <!-- orbital node A (primary) -->
+    <g transform="translate(440 95)">
       <rect x="-14" y="-9" width="28" height="18" rx="2" fill="#0A1220" stroke="#FFCB05" stroke-width="1.6"/>
       <rect x="-34" y="-6" width="16" height="12" fill="#16406B" stroke="#5B84AE" stroke-width="1"/>
       <rect x="18" y="-6" width="16" height="12" fill="#16406B" stroke="#5B84AE" stroke-width="1"/>
       <circle r="2.4" fill="#FFCB05"/>
     </g>
+    <!-- orbital node B -->
+    <g transform="translate(515 62)">
+      <rect x="-10" y="-6.5" width="20" height="13" rx="1.6" fill="#0A1220" stroke="#8FA9C9" stroke-width="1.3"/>
+      <rect x="-24" y="-4.5" width="12" height="9" fill="#16406B" stroke="#5B84AE" stroke-width="0.8"/>
+      <rect x="12" y="-4.5" width="12" height="9" fill="#16406B" stroke="#5B84AE" stroke-width="0.8"/>
+      <circle r="1.8" fill="#5EE0A0"/>
+    </g>
+    <!-- orbital node C -->
+    <g transform="translate(530 140)">
+      <rect x="-10" y="-6.5" width="20" height="13" rx="1.6" fill="#0A1220" stroke="#8FA9C9" stroke-width="1.3"/>
+      <rect x="-24" y="-4.5" width="12" height="9" fill="#16406B" stroke="#5B84AE" stroke-width="0.8"/>
+      <rect x="12" y="-4.5" width="12" height="9" fill="#16406B" stroke="#5B84AE" stroke-width="0.8"/>
+      <circle r="1.8" fill="#5EE0A0"/>
+    </g>
     <!-- stars -->
     <g fill="#5B84AE">
       <circle cx="90" cy="70" r="1.4"/><circle cx="200" cy="40" r="1.1"/><circle cx="320" cy="90" r="1.3"/>
-      <circle cx="420" cy="30" r="1.1"/><circle cx="540" cy="180" r="1.2"/><circle cx="260" cy="150" r="1"/>
+      <circle cx="420" cy="30" r="1.1"/><circle cx="560" cy="190" r="1.2"/><circle cx="260" cy="150" r="1"/>
     </g>
   </svg>
   <div class="hero-inner">
@@ -221,6 +241,7 @@ footer{background:var(--navy);color:#B9C6D4;margin-top:20px}
     <div class="pcard"><div class="avatar">LB</div><div><div class="name"><a href="https://www.linkedin.com/in/linkan-bian-3a1190a/" target="_blank" rel="noopener">Linkan Bian</a></div><div class="aff">Professor & Department Head, School of Industrial Engineering and Management, Oklahoma State University</div></div></div>
     <div class="pcard"><div class="avatar">KD</div><div><div class="name"><a href="https://www.linkedin.com/in/kdontchev" target="_blank" rel="noopener">Kiko Dontchev</a></div><div class="aff">VP of Launch, SpaceX</div></div></div>
     <div class="pcard"><div class="avatar">KD</div><div><div class="name"><a href="https://aero.engin.umich.edu/people/duraisamy-karthik/" target="_blank" rel="noopener">Karthik Duraisamy</a></div><div class="aff">Arthur B. Modine Professor of Engineering; Samir and Puja Kaul Director of MICDE, University of Michigan</div></div></div>
+    <div class="pcard"><div class="avatar">MF</div><div><div class="name"><a href="https://www.linkedin.com/in/michael-fletcher-68819411/" target="_blank" rel="noopener">Michael Fletcher</a></div><div class="aff">President, MJF Consulting, LLC</div></div></div>
     <div class="pcard"><div class="avatar">ML</div><div><div class="name"><a href="https://aero.engin.umich.edu/people/li-max/" target="_blank" rel="noopener">Max Li</a></div><div class="aff">Assistant Professor, Aerospace Engineering, University of Michigan</div></div></div>
     <div class="pcard"><div class="avatar">DL</div><div><div class="name"><a href="https://eecs.engin.umich.edu/people/liang-di/" target="_blank" rel="noopener">Di Liang</a></div><div class="aff">Professor, Electrical Engineering and Computer Science, University of Michigan</div></div></div>
     <div class="pcard"><div class="avatar">JS</div><div><div class="name"><a href="https://cee.engin.umich.edu/people/scruggs-jeff/" target="_blank" rel="noopener">Jeff Scruggs</a></div><div class="aff">Professor, Civil & Environmental Engineering, University of Michigan</div></div></div>
@@ -321,7 +342,7 @@ footer{background:var(--navy);color:#B9C6D4;margin-top:20px}
   <div class="sched">
     <div class="slot"><div class="time">12:45 – 1:15 PM</div><div class="what"><div class="title">Keynote: Overview of the USSF Institute: Space Power and Propulsion for Agility, Responsiveness, and Resilience (SPAR)</div><div class="who"><b>Benjamin Jorns</b>, Professor, Aerospace Engineering, University of Michigan</div><div class="disc">SPAR is a five-year, $35M USSF Space Strategic Technology Institute developing advanced space power and propulsion technologies. Led by the University of Michigan with seven university partners and ten small businesses, and advised by aerospace primes and government partners, the institute advances next-generation space power and propulsion capabilities. This talk overviews SPAR's goals, organizational structure, and recent results.</div><div class="fmt">25-min talk + 5-min Q&amp;A</div></div></div>
     <div class="slot"><div class="time">1:15 – 2:15 PM</div><div class="what"><div class="title">Technical Talk Session 2</div><div class="who">Three talks, each 15-min talk + 5-min Q&amp;A:</div><div class="who"><b>1:15</b> · Data Centers in Orbit: Thermal and Energy Feasibility from Chip to Radiator — <b>Tengfei Luo</b>, Professor, Aerospace and Mechanical Engineering, University of Notre Dame<br><b>1:35</b> · Microconcentrating photovoltaics for space power — <b>Chris Giebink</b>, Professor, Electrical Engineering and Computer Science, University of Michigan<br><b>1:55</b> · Emerging Ferroelectric Nitride Technologies for Space and Data-Center Electronics — <b>Zetian Mi</b>, Pallab K. Bhattacharya Collegiate Professor of Engineering; Professor, Electrical Engineering and Computer Science, University of Michigan</div></div></div>
-    <div class="slot"><div class="time">2:15 – 3:00 PM</div><div class="what"><div class="title">Panel 2: Computing &amp; Ecosystem in Orbit — Infrastructure, AI/Data Workloads, Energy Control</div><div class="disc">In-space computing hardware and system architectures; AI and data workloads for orbital platforms; resilience, security &amp; fault tolerance; data-center infrastructure and operations in orbit; space communications; power and energy control; thermal management.</div><div class="who" style="margin-top:6px"><b>Moderator:</b> Nathaniel Bleier (CSE, UMich)<br><b>Panelists:</b> Karthik Duraisamy (Professor, AERO; Director, MICDE, UMich); Muhammad Shahbaz (CSE, UMich); Di Liang (EECS, UMich)</div></div></div>
+    <div class="slot"><div class="time">2:15 – 3:00 PM</div><div class="what"><div class="title">Panel 2: Computing &amp; Ecosystem in Orbit — Infrastructure, AI/Data Workloads, Energy Control</div><div class="disc">In-space computing hardware and system architectures; AI and data workloads for orbital platforms; resilience, security &amp; fault tolerance; data-center infrastructure and operations in orbit; space communications; power and energy control; thermal management.</div><div class="who" style="margin-top:6px"><b>Moderator:</b> Nathaniel Bleier (CSE, UMich)<br><b>Panelists:</b> Karthik Duraisamy (Professor, AERO; Director, MICDE, UMich); Muhammad Shahbaz (CSE, UMich); Di Liang (EECS, UMich); Michael Fletcher (President, MJF Consulting, LLC)</div></div></div>
     <div class="slot"><div class="time">3:00 – 3:30 PM</div><div class="what"><div class="title">Government and Industry Panel: Policy, Business Models, Funding, and Collaboration</div><div class="disc">Open-floor session with interaction from participants and the audience, focused on policy design, business models, potential funding mechanism, and collaboration opportunities across academia, industry, and government.</div><div class="who" style="margin-top:6px"><b>Moderator:</b> Siqian Shen (Professor, IOE & CEE; Associate Director, MICDE, UMich)<br><b>Panelists:</b> TBD</div></div></div>
     <div class="slot"><div class="time">3:30 – 4:00 PM</div><div class="what"><div class="title">Head to the IOE Building (North Campus)</div><div class="who">Travel from the auditorium to the Department of Industrial and Operations Engineering building; directions and transportation guidance will be provided on site.</div></div></div>
     <div class="slot"><div class="time">4:00 – 5:30 PM</div><div class="what"><div class="title">Poster Session, Reception & Career Fair — IOE Building</div><div class="who">Student poster session; drinks & light refreshments; social networking; meeting collaborators and employers (career fair)</div><div class="who">Closing remarks — <b>Siqian Shen</b>, Workshop Organizing Committee Chair</div></div></div>
